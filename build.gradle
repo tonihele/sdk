@@ -309,61 +309,58 @@ createBaseXml.inputs.files configurations.corelibs.resolve()
 createBaseXml.outputs.file "jme3-core-baselibs/nbproject/project.xml"
 createBaseXml.outputs.file "jme3-core-libraries/nbproject/project.xml"
 
-tasks.register('copyProjectLibs') {
-    dependsOn configurations.corelibs, configurations.testdatalibs
-    doLast {
-        description = "Copies the jar files needed to supply the J2SE Libraries in the " +
-                "SDK to jme3-project-baselibs and jme3-project-libraries"
+tasks.register('copyProjectBaseLibraries', Copy) {
+    description = 'Copies JME base libraries (jars, sources, javadocs)'
 
-        // for each dependency in corelibs and optlibs..
-        def deps = []
-        deps.addAll(project.configurations.corelibs.files)
-        deps.addAll(project.configurations.optlibs.files)
-        deps.each { dep ->
-            // copy jme3 jar files, sources and javadocs to jme3-project-baselibs
+    from(configurations.corelibs)
+    from(configurations.optlibs)
 
-            if (isSource(dep.name)) {
-                copy {
-                    from dep
-                    into "jme3-project-baselibs/release/libs/"
-                }
-            } else if (isJavadoc(dep.name)) {
-                copy {
-                    from dep
-                    into "jme3-project-baselibs/release/libs/"
-                }
-            } else if (isJmeDep(dep.name)) {
-                copy {
-                    from dep
-                    into "jme3-project-baselibs/release/libs/"
-                }
-            } else {
-                copy {
-                    from dep
-                    into "jme3-project-libraries/release/libs/"
-                }
-            }
-
-        }
-
-        project.configurations.testdatalibs.files.each { dep ->
-            // copy jme3 test data to jme3-project-testdata
-            if (isJmeDep(dep.name)) {
-                copy {
-                    from dep
-                    into "jme3-project-testdata/release/modules/ext/"
-                    rename("jme3-testdata(.*)", "jme3-testdata.jar")
-                }
-            }
-        }
+    include { details ->
+        def name = details.file.name
+        isSource(name) || isJavadoc(name) || isJmeDep(name)
     }
+
+    into "jme3-project-baselibs/release/libs/"
+
+    includeEmptyDirs = false
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }
-copyProjectLibs.inputs.files configurations.corelibs.resolve()
-copyProjectLibs.inputs.files configurations.optlibs.resolve()
-copyProjectLibs.inputs.files configurations.testdatalibs.resolve()
-copyProjectLibs.outputs.dir "jme3-project-baselibs/release/libs/"
-copyProjectLibs.outputs.dir "jme3-project-libraries/release/libs/"
-copyProjectLibs.outputs.dir "jme3-project-testdata/release/modules/ext/"
+
+tasks.register('copyProjectLibraries', Copy) {
+    description = 'Copies third-party project libraries'
+
+    from(configurations.corelibs)
+    from(configurations.optlibs)
+
+    exclude { details ->
+        def name = details.file.name
+        isSource(name) || isJavadoc(name) || isJmeDep(name)
+    }
+
+    into "jme3-project-libraries/release/libs/"
+
+    includeEmptyDirs = false
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
+tasks.register('copyProjectTestData', Copy) {
+    description = 'Copies jme3 test data'
+
+    from(configurations.testdatalibs) {
+        include { isJmeDep(it.file.name) }
+    }
+
+    into "jme3-project-testdata/release/modules/ext/"
+
+    rename(/jme3-testdata(.*)/, 'jme3-testdata.jar')
+
+    includeEmptyDirs = false
+}
+
+tasks.register('copyProjectLibs') {
+    description = 'Copies all project libraries and test data'
+    dependsOn 'copyProjectBaseLibraries', 'copyProjectLibraries', 'copyProjectTestData'
+}
 
 // workaround method to add a tag with the name "name" and "file" to an XML MarkupBuilder
 static def makeName(builder, nameR) { builder.name nameR }
