@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2009-2020 jMonkeyEngine
+ *  Copyright (c) 2009-2026 jMonkeyEngine
  *  All rights reserved.
  * 
  *  Redistribution and use in source and binary forms, with or without
@@ -66,8 +66,8 @@ public class JmeJoint extends AbstractSceneExplorerNode {
     public JmeJoint() {
     }
 
-    public JmeJoint(JmeSkinningControl jmeSkinningControl, Joint joint, JmeJointChildren children) {
-        super(children);
+    public JmeJoint(JmeSkinningControl jmeSkinningControl, Joint joint, JmeJointChildren children, DataObject dataObject) {
+        super(children, dataObject);
         this.jmeSkinningControl = jmeSkinningControl;
         getLookupContents().add(joint);
         getLookupContents().add(this);
@@ -102,7 +102,7 @@ public class JmeJoint extends AbstractSceneExplorerNode {
     @Override
     public Action[] getActions(boolean context) {
         return new Action[]{
-            Actions.alwaysEnabled(new AttachementNodeActionListener(), "Get attachement Node", "", false),
+            Actions.alwaysEnabled(new AttachementNodeActionListener(), "Get attachment Node", "", false),
             Actions.alwaysEnabled(new ArmatureMaskActionListener(), "Create armature mask", "", false)
         };
     }
@@ -122,7 +122,7 @@ public class JmeJoint extends AbstractSceneExplorerNode {
         JmeJointChildren children = new JmeJointChildren(jmeSkinningControl, (Joint)key);
         children.setReadOnly(cookie);
         children.setDataObject(key2);
-        return new org.openide.nodes.Node[]{new JmeJoint(jmeSkinningControl, (Joint)key, children).setReadOnly(cookie)};
+        return new org.openide.nodes.Node[]{new JmeJoint(jmeSkinningControl, (Joint)key, children, key2).setReadOnly(cookie)};
     }
     
     

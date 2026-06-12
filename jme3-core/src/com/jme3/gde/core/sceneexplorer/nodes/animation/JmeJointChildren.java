@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2009-2020 jMonkeyEngine
+ *  Copyright (c) 2009-2026 jMonkeyEngine
  *  All rights reserved.
  * 
  *  Redistribution and use in source and binary forms, with or without
@@ -101,7 +101,7 @@ public class JmeJointChildren extends Children.Keys<Object> {
             JmeJointChildren children = new JmeJointChildren(jmeSkinningControl, (Joint)key);
             children.setReadOnly(readOnly);
             children.setDataObject(dataObject);
-            return new Node[]{new JmeJoint(jmeSkinningControl, (Joint)key, children).setReadOnly(readOnly)};
+            return new Node[]{new JmeJoint(jmeSkinningControl, (Joint)key, children, dataObject).setReadOnly(readOnly)};
         } else {
             return new Node[]{Node.EMPTY};
         }
