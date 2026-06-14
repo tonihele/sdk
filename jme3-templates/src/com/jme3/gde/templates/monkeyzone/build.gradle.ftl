@@ -3,10 +3,13 @@ plugins {
     id 'application'
 }
 
-group 'com.monkeyzone'
-version '1.0'
+group = 'com.monkeyzone'
+version = '1.0'
 
-mainClassName = "com.monkeyzone.MonkeyZone"
+application {
+    applicationName = '${name}'
+    mainClass = 'com.monkeyzone.MonkeyZone'
+}
 
 repositories {
     mavenCentral()
@@ -56,7 +59,7 @@ dependencies {
 
 jar {
     manifest {
-        attributes 'Main-Class': "$mainClassName"
+        attributes 'Main-Class': application.mainClass
     }
 }
 

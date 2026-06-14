@@ -3,10 +3,13 @@ plugins {
     id 'application'
 }
 
-group 'com.JaimesAscent'
-version '1.0'
+group = 'com.JaimesAscent'
+version = '1.0'
 
-mainClassName = "com.JaimesAscent.JaimesAscent"
+application {
+    applicationName = '${name}'
+    mainClass = 'com.JaimesAscent.JaimesAscent'
+}
 
 repositories {
     mavenCentral()
@@ -56,7 +59,7 @@ dependencies {
 
 jar {
     manifest {
-        attributes 'Main-Class': "$mainClassName"
+        attributes 'Main-Class': application.mainClass
     }
 }
 
