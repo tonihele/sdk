@@ -13,7 +13,7 @@ repositories {
 }
 
 project.ext {
-  jmeVer = '3.7.0-stable'
+  jmeVer = '3.9.0-stable'
 }
 
 project(":assets") {
@@ -48,8 +48,8 @@ dependencies {
   implementation "org.jmonkeyengine:jme3-desktop:$jmeVer"
   implementation "org.jmonkeyengine:jme3-lwjgl:$jmeVer"
   implementation "org.jmonkeyengine:jme3-lwjgl:$jmeVer"
-  implementation "com.github.stephengold:Heart:9.0.0"
-  implementation "com.github.stephengold:Minie:8.0.0"
+  implementation "com.github.stephengold:Heart:9.3.0"
+  implementation "com.github.stephengold:Minie:9.0.3"
   implementation project("assets")
 
 }
@@ -61,5 +61,5 @@ jar {
 }
 
 wrapper {
-    gradleVersion = '8.6'
+    gradleVersion = '9.2.1'
 }

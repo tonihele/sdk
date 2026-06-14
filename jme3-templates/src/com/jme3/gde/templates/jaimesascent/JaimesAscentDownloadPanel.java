@@ -64,7 +64,7 @@ public class JaimesAscentDownloadPanel implements WizardDescriptor.Panel,
     }
     
     public int doDownloadZip() {
-        return downloadFile("https://github.com/neph1/JaimesAscent/archive/refs/tags/v1.1.1.zip", DOWNLOAD_FOLDER, ZIP_NAME);
+        return downloadFile("https://github.com/neph1/JaimesAscent/archive/refs/tags/v1.1.3.zip", DOWNLOAD_FOLDER, ZIP_NAME);
     }
     
     private int downloadFile(String fileURL, String saveDir, String fileName) {
