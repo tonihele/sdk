@@ -27,7 +27,7 @@ Thus the prefered download is `jmonkeyplatform-windows-x64.exe` which essentiall
 After the SDK is up and running. A good starting point is to look at the jME examples. Under *File | New project | JME3 Tests* you can create a new project, populated with the jME build in examples. You can freely mess around with these and try out stuff. Your changes can always be reverted by simply creating a new *JME3 Tests* project. Once you are all comfortable and ready to embark on your own exciting journey, *File | New project | Basic game (with Gradle)* is the recommended starting point.
 
 ## Building the SDK
-Building the SDK is an easy process basically, but it depends on what kind of distribution you want to build. Currently the SDK requires __JDK 21__ to build.
+Building the SDK is an easy process basically, but it depends on what kind of distribution you want to build. Currently the SDK requires __JDK 25__ to build.
 You also have to know that the build process changes from time to time, so have a look at the `.github/workflows/gradle.yml` file, or related, you will see how we build our releases then.  
 
 Technically the gradle task `buildSdk` is the main task which builds the sdk (Invoking `./gradlew buildSdk` or `gradlew.bat buildSdk` on Windows).
