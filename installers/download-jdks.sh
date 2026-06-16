@@ -4,7 +4,7 @@
 
 set -e # Quit on Error
 
-jdk_major_version="21"
+jdk_major_version="25"
 jvm_impl="hotspot"
 jdk_vendor="eclipse"
 

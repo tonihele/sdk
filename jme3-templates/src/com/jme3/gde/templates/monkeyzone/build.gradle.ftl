@@ -3,17 +3,20 @@ plugins {
     id 'application'
 }
 
-group 'com.monkeyzone'
-version '1.0'
+group = 'com.monkeyzone'
+version = '1.0'
 
-mainClassName = "com.monkeyzone.MonkeyZone"
+application {
+    applicationName = '${name}'
+    mainClass = 'com.monkeyzone.MonkeyZone'
+}
 
 repositories {
     mavenCentral()
 }
 
 project.ext {
-  jmeVer = '3.7.0-stable'
+  jmeVer = '3.9.0-stable'
 }
 
 project(":assets") {
@@ -31,14 +34,14 @@ project(":assets") {
 
     java {
         toolchain {
-            languageVersion = JavaLanguageVersion.of(21)
+            languageVersion = JavaLanguageVersion.of(25)
         }
     }
 }
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(25)
     }
 }
 
@@ -48,18 +51,18 @@ dependencies {
   implementation "org.jmonkeyengine:jme3-desktop:$jmeVer"
   implementation "org.jmonkeyengine:jme3-lwjgl:$jmeVer"
   implementation "org.jmonkeyengine:jme3-lwjgl:$jmeVer"
-  implementation "com.github.stephengold:Heart:9.0.0"
-  implementation "com.github.stephengold:Minie:8.0.0"
+  implementation "com.github.stephengold:Heart:9.3.0"
+  implementation "com.github.stephengold:Minie:9.0.3"
   implementation project("assets")
 
 }
 
 jar {
     manifest {
-        attributes 'Main-Class': "$mainClassName"
+        attributes 'Main-Class': application.mainClass
     }
 }
 
 wrapper {
-    gradleVersion = '8.6'
+    gradleVersion = '9.2.1'
 }

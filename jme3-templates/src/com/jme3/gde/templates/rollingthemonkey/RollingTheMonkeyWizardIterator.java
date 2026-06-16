@@ -117,9 +117,9 @@ public class RollingTheMonkeyWizardIterator implements WizardDescriptor./*Progre
         
         // Create build.gradle from template
         File gradleBuildFile = new File(dirF, "build.gradle");
-        Map<String, Object> buildFileBindings = new HashMap<>();
         
-        createFileFromTemplate(gradleBuildFile, BUILDFILE, buildFileBindings);
+        createFileFromTemplate(gradleBuildFile, BUILDFILE,
+                Collections.singletonMap("name", wiz.getProperty("name")));
         
         // Always open top dir as a project:
         resultSet.add(dir);
