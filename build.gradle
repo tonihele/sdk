@@ -45,8 +45,8 @@ dependencies {
 	corelibs dep("org.jmonkeyengine:jme3-plugins-json-gson:$jmeVersion-$jmeVersionTag", true, true)
     corelibs dep("org.jmonkeyengine:jme3-lwjgl:$jmeVersion-$jmeVersionTag", true, true)
     corelibs dep("org.jmonkeyengine:jme3-effects:$jmeVersion-$jmeVersionTag", true, true)
-    corelibs dep("com.github.stephengold:Minie:8.2.0", true, true) // replacement for bullet-native
-    corelibs dep("com.github.stephengold:Heart:9.1.0", true, true) // requirement for Minie
+    corelibs dep("com.github.stephengold:Minie:9.0.3", true, true) // replacement for bullet-native
+    corelibs dep("com.github.stephengold:Heart:9.3.0", true, true) // requirement for Minie
     corelibs dep(fileTree("lib"), false, false)
     corelibs dep("org.jmonkeyengine:jme3-jogg:$jmeVersion-$jmeVersionTag", true, true)
 
@@ -59,14 +59,14 @@ dependencies {
     optlibs dep("com.simsilica:lemur-props:1.2.0", true, true)
     optlibs dep("com.simsilica:sio2:1.8.0", true, true)
     optlibs dep("com.simsilica:sim-math:1.6.0", true, true)
-    optlibs dep("com.simsilica:zay-es:1.5.0", true, true)
+    optlibs dep("com.simsilica:zay-es:1.6.0", true, true)
 
     optlibs dep("org.jmonkeyengine:jme3-jbullet:$jmeVersion-$jmeVersionTag", true, true)
     optlibs dep("org.jmonkeyengine:jme3-android:$jmeVersion-$jmeVersionTag", true, true)
     optlibs dep("org.jmonkeyengine:jme3-ios:$jmeVersion-$jmeVersionTag", true, true)
     optlibs dep("org.jmonkeyengine:jme3-android-native:$jmeVersion-$jmeVersionTag", true, true)
     optlibs dep("org.jmonkeyengine:jme3-lwjgl3:$jmeVersion-$jmeVersionTag", true, true)
-    optlibs dep("com.github.stephengold:Wes:0.8.1", true, true)
+    optlibs dep("com.github.stephengold:Wes:0.8.3", true, true)
     testdatalibs dep("org.jmonkeyengine:jme3-testdata:$jmeVersion-$jmeVersionTag", false, false)
     examplelibs dep("org.jmonkeyengine:jme3-examples:$jmeVersion-$jmeVersionTag", false, true)
 }

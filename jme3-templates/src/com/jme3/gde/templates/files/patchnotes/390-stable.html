@@ -1,0 +1,96 @@
+<html>
+  <p>A production-quality JMonkeyEngine 3.9.0 stable release with the following noteworthy changes relative to 3.8.1-stable:</p>
+  <ul>
+      <li>Improved fix for IndexOutOfBoundsException by <a href="https://github.com/tonihele">@tonihele</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2403">#2403</a></li>
+      <li>Fix NPE on AbstractShadowFilter deserialization by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2405">#2405</a></li>
+      <li>Update gradle.properties by <a href="https://github.com/yaRnMcDonuts">@yaRnMcDonuts</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2415">#2415</a></li>
+      <li>Create additional screenshot tests and add an auto message on screenshot test failure by <a href="https://github.com/richardTingle">@richardTingle</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2413">#2413</a></li>
+      <li><a href="https://github.com/jMonkeyEngine/jmonkeyengine/issues/2416">#2416</a> pbr screenshot tests by <a href="https://github.com/richardTingle">@richardTingle</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2417">#2417</a></li>
+      <li>Fix <a href="https://github.com/jMonkeyEngine/jmonkeyengine/issues/2408">#2408</a> - com.jme3.audio.LowPassFilter not cloneable by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2410">#2410</a></li>
+      <li>com.jme3.audio.Listener: format code + javadoc by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2414">#2414</a></li>
+      <li>jme3-examples: TestPostWater code cleanup by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2418">#2418</a></li>
+      <li>jme3-examples: TestReverb code cleanup by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2419">#2419</a></li>
+      <li>Add InstanceNode test using PBRLighting by <a href="https://github.com/yaRnMcDonuts">@yaRnMcDonuts</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2437">#2437</a></li>
+      <li>jme3-examples: TestAmbient - test code optimization by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2429">#2429</a></li>
+      <li>jme3-examples: TestOgg - added additional parameter tests by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2425">#2425</a></li>
+      <li>jme3-examples: add TestDeviceDisconnect class by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2433">#2433</a></li>
+      <li>com.jme3.audio.Environment: javadoc by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2428">#2428</a></li>
+      <li>LwjglCanvas: typo in getPrintContextInitInfo() method by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2434">#2434</a></li>
+      <li>Update DebugValuesMode documentation in PBRLighting.j3md by <a href="https://github.com/yaRnMcDonuts">@yaRnMcDonuts</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2427">#2427</a></li>
+      <li>jme3-examples: TestWav - test code optimization by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2430">#2430</a></li>
+      <li>jme3-examples: TestDoppler - test code optimization by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2431">#2431</a></li>
+      <li>jme3-examples: add TestAudioDirectional class by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2432">#2432</a></li>
+      <li>DefaultParticleInfluencer: incorrect cloning of variables by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2407">#2407</a></li>
+      <li>EmitterShape: javadoc improvements by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2420">#2420</a></li>
+      <li>ALAudioRenderer: code improvements by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2423">#2423</a></li>
+      <li><a href="https://github.com/jMonkeyEngine/jmonkeyengine/issues/2442">#2442</a> Automate test TestInstanceNodeWithPbr by <a href="https://github.com/richardTingle">@richardTingle</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2443">#2443</a></li>
+      <li>com.jme3.audio.LowPassFilter lacks the required no-argument constructor for jME deserialization by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2441">#2441</a></li>
+      <li>FastMath: new utility methods by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2450">#2450</a></li>
+      <li>Add makeGeometry() method to WireSphere for consistency with WireBox by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2458">#2458</a></li>
+      <li>CameraEvent: javadoc by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2448">#2448</a></li>
+      <li>PBR Fixes: Apply band factor to spherical harmonic coefficients in accelerated baker light and prevent fireflies artifacts by <a href="https://github.com/riccardobl">@riccardobl</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2439">#2439</a></li>
+      <li>Update PBR Screenshot Tests by <a href="https://github.com/yaRnMcDonuts">@yaRnMcDonuts</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2462">#2462</a></li>
+      <li>New audio filters: HighPassFilter and BandPassFilter by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2444">#2444</a></li>
+      <li>Undeprecate LoopMode by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2477">#2477</a></li>
+      <li>MorphTarget: Add Missing License and Javadoc by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2464">#2464</a></li>
+      <li>Return normal of sphere shaped emitter by <a href="https://github.com/riccardobl">@riccardobl</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2469">#2469</a></li>
+      <li>Fix bbox validation check in particle emitter by <a href="https://github.com/riccardobl">@riccardobl</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2468">#2468</a></li>
+      <li>Add Missing Joystick Button Definitions by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2474">#2474</a></li>
+      <li>Enhance Material Javadoc by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2459">#2459</a></li>
+      <li>Revert Static keyword in JoystickButton by <a href="https://github.com/yaRnMcDonuts">@yaRnMcDonuts</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2484">#2484</a></li>
+      <li>Reduce object allocations in MotionEvent's direction computation by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2447">#2447</a></li>
+      <li>Improve LightControl Javadoc &amp; Add Light Type Validation by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2451">#2451</a></li>
+      <li>Add TextureMultisample cap to macos with gl &gt; 3.2 by <a href="https://github.com/riccardobl">@riccardobl</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2475">#2475</a></li>
+      <li>WireFrustum: javadoc + add makeGeometry(Camera) method by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2480">#2480</a></li>
+      <li>Fix framebuffer initialization when cap TextureMultisample is missing by <a href="https://github.com/riccardobl">@riccardobl</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2476">#2476</a></li>
+      <li>jme3-examples: TestLodGeneration - test code optimization  by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2457">#2457</a></li>
+      <li>SSAOFilter: javadoc + fix approximateNormals serialization by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2486">#2486</a></li>
+      <li>Wayland fullscreen issue fixed by <a href="https://github.com/JNightRider">@JNightRider</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2492">#2492</a></li>
+      <li>Materials: new material definitions for common shaders by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2485">#2485</a></li>
+      <li>Add new screenshot tests for bill boarding, cartoons, fog and scattering by <a href="https://github.com/richardTingle">@richardTingle</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2518">#2518</a></li>
+      <li>Refactor: optimize FlyByCamera and reduce object allocations + javadoc by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2498">#2498</a></li>
+      <li>Feat: ConstantVerifierState - expand JME constant verification, fix logger name + javadoc by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2499">#2499</a></li>
+      <li>Refactor: optimize ColorRGBA class + reduce code duplication by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2507">#2507</a></li>
+      <li>Fix <a href="https://github.com/jMonkeyEngine/jmonkeyengine/issues/2355">#2355</a> - VertexBuffer doesn't serialize the 'name' field by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2508">#2508</a></li>
+      <li>AudioNode: add getAudioKey() method by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2512">#2512</a></li>
+      <li>Consistent toString() for Lights by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2473">#2473</a></li>
+      <li>ShaderNodeDefinitionLoader: Ensures clean instance state by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2510">#2510</a></li>
+      <li>MatrixJointModelTransform: missing license + javadoc by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2511">#2511</a></li>
+      <li>Refactor: LightsDebugState optimization, javadoc, performance by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2467">#2467</a></li>
+      <li>Feat: WAVLoader: Ensures clean instance state, optimization + javadoc by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2496">#2496</a></li>
+      <li>Refactor: SkinningControl optimization + javadoc  by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2504">#2504</a></li>
+      <li>feat: Improve ArmatureDebugAppState by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2491">#2491</a></li>
+      <li>Feat: Improve ArmatureDebugger by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2493">#2493</a></li>
+      <li>new process for publishing snapshots and releases to Sonatype by <a href="https://github.com/stephengold">@stephengold</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2535">#2535</a></li>
+      <li>better location for the "uploadToCentral.sh" build script by <a href="https://github.com/stephengold">@stephengold</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2536">#2536</a></li>
+      <li>VarType: javadoc by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2519">#2519</a></li>
+      <li>Refactor: AbstractShadowFilter reduce object allocations by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2516">#2516</a></li>
+      <li>Feat: EmitterMeshFaceShape - enhance particle emission uniformity by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2503">#2503</a></li>
+      <li>Support for switching platforms (from Wayland EGL to X11 GLX) by <a href="https://github.com/JNightRider">@JNightRider</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2500">#2500</a></li>
+      <li>AWTSettingsDialog: javadoc + add AppSettings Preference logging by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2478">#2478</a></li>
+      <li><a href="https://github.com/jMonkeyEngine/jmonkeyengine/issues/2541">#2541</a> move screenshots to docker by <a href="https://github.com/richardTingle">@richardTingle</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2542">#2542</a></li>
+      <li>Changes pipeline lists to from LinkedList to ArrayList by <a href="https://github.com/codex128">@codex128</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2543">#2543</a></li>
+      <li>Fixed stencil reference handling in RenderState <a href="https://github.com/jMonkeyEngine/jmonkeyengine/issues/2538">#2538</a> by <a href="https://github.com/theMinka">@theMinka</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2539">#2539</a></li>
+      <li>Fix inverted axis in gltf loader by <a href="https://github.com/riccardobl">@riccardobl</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2546">#2546</a></li>
+      <li>Enhance BitmapFont and BitmapText Javadoc by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2534">#2534</a></li>
+      <li>ArmatureDebugAppState: minor fix and improvements by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2531">#2531</a></li>
+      <li>Refactor: PointLightShadowRenderer reduce object allocations by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2514">#2514</a></li>
+      <li>Refactor: BinaryExporter optimization + javadoc  by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2524">#2524</a></li>
+      <li>Refactor: NewtonianParticleInfluencer reduce object allocations by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2506">#2506</a></li>
+      <li>Android 16kb openalsoft update by <a href="https://github.com/joliver82">@joliver82</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2552">#2552</a></li>
+      <li><a href="https://github.com/jMonkeyEngine/jmonkeyengine/issues/2562">#2562</a> thread warden by <a href="https://github.com/richardTingle">@richardTingle</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2563">#2563</a></li>
+      <li>Refactor RenderManager for improved Type Safety, javadoc, and code clarity by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2530">#2530</a></li>
+      <li>Added convenience method worldToLocal(Quaternion) to spatial.  by <a href="https://github.com/zzuegg">@zzuegg</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2559">#2559</a></li>
+      <li>Android 16kb fix by <a href="https://github.com/joliver82">@joliver82</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2573">#2573</a></li>
+      <li>solve issue <a href="https://github.com/jMonkeyEngine/jmonkeyengine/issues/2571">#2571</a> (RendererException with hw skinning disabled) by <a href="https://github.com/stephengold">@stephengold</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2574">#2574</a></li>
+      <li>Improve memory efficiency and speed of gltf importer by <a href="https://github.com/riccardobl">@riccardobl</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2553">#2553</a></li>
+      <li>perform json element autoCast when loading user data in gltf loader by <a href="https://github.com/riccardobl">@riccardobl</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2558">#2558</a></li>
+      <li>Make initial velocity influence newtornian particles by <a href="https://github.com/riccardobl">@riccardobl</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2470">#2470</a></li>
+      <li>iOS support by <a href="https://github.com/joliver82">@joliver82</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2411">#2411</a></li>
+      <li>Refactor: optimize AbstractShadowRenderer by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2517">#2517</a></li>
+      <li>Refactor: FilterPostProcessor javadoc by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2502">#2502</a></li>
+      <li>JmeSystem: code improvements by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2421">#2421</a></li>
+      <li>Refactor: SimpleApplication optimization + javadoc  by <a href="https://github.com/capdevon">@capdevon</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2490">#2490</a></li>
+      <li>KHR pbr neutral tonemap by <a href="https://github.com/riccardobl">@riccardobl</a> in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/pull/2547">#2547</a></li>
+  </ul>
+</html>

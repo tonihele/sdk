@@ -56,6 +56,8 @@ package com.jme3.gde.templates.gradledesktop.options;
  */
 public enum JMEVersion implements LibraryVersion {
 
+    JME_3_9_0("3.9.0-stable",
+            "/com/jme3/gde/templates/files/patchnotes/390-stable.html"),
     JME_3_8_1("3.8.1-stable",
             "/com/jme3/gde/templates/files/patchnotes/381-stable.html"),
     JME_3_8_0("3.8.0-stable",
